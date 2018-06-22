@@ -2,12 +2,12 @@ class EventsController < ApplicationController
     
     
   def new
-    @event = user.events.build
+    @event = @user.events.build
   end
     
     
   def create
-    @event = user.events.build(event_params)
+    @event = @user.events.build(event_params)
     if @event.save
       redirect_to event_path(@event)
     else
