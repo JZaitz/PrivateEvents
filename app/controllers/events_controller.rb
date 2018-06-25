@@ -5,17 +5,22 @@ class EventsController < ApplicationController
   end
     
   def new
-    #@event = @user.events.build
+    @event = Event.new
   end
     
     
   def create
-    #@event = Event.new(event_params)
+    #@event = Event.new(params[:id])
+    @event = Event.new(event_params)
     #@event.user_id = params[:user_id]
+  
+    
 
-    #@event.save
+    @event.save
 
-    #redirect_to user_path(@event.user)
+    #redirect_to event_path(@event)
+    #redirect_to event_path(params[@event.id])
+    #redirect_to events_path
 
   end
   
@@ -23,7 +28,7 @@ class EventsController < ApplicationController
   end
 
   def show
-    #@event = Event.find(params[:id])
+    @event = Event.find(params[:id])
   end
 
   def index
