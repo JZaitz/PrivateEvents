@@ -1,0 +1,8 @@
+<h3>Event Information for Event #<%= Event.first.id %></h3>
+    <ul>
+        <li><%= Event.first.title %></li>
+        <li><%= Event.first.location %></li>
+        <li>Date:<%= Event.first.date %></li>
+        <li>Event Owner:<%= Event.first.user.name %></li>
+        
+    </ul>

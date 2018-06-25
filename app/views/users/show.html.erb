@@ -9,6 +9,11 @@
   <strong>Email:</strong>
   <%= @user.email %>
 </p>
+<h3>Event Listing</h3>
+<%= render partial: 'users/event' %>
+
+<%= render partial: 'events/form' %>
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
